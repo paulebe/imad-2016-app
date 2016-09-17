@@ -8,6 +8,9 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+app.get('/test.php', function (req, res) {
+  res.sendFile(path.join(__dirname,'test.php'));
+});
 app.get('/paul', function (req, res) {
   res.send("paul was requested");
 });
